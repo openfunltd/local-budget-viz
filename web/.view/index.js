@@ -148,12 +148,13 @@ pug_html = pug_html + "\u003Clink" + (" rel=\"stylesheet\" type=\"text\u002Fcss\
 }
 };
 pug_html = pug_html + "\u003Chtml\u003E\u003Chead\u003E";
+libLoader.root("./assets/lib")
 pug_mixins["css"]([
     {name: "bootstrap", path: "dist/css/bootstrap.min.css"}
     ]);
 pug_html = pug_html + "\u003C\u002Fhead\u003E\u003Cbody\u003E\u003Cdiv class=\"my-4 px-4 w-100\"\u003E\u003Cdiv class=\"mx-auto w-100 border p-4 rounded\" ld=\"chart\" style=\"height:500px\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 pug_mixins["script"]([
-    {url: "/assets/custom/bundle.min.js"},
+    {url: "./assets/custom/bundle.min.js"},
     {name: "ldview"}
     ]);
 pug_html = pug_html + "\u003Cscript type=\"module\"\u003Evar view;view=new ldview({root:document.body});ld$.fetch(\"https:\u002F\u002Fbudget.openfun.app\u002Fapi\u002Fcounties\",{method:\"GET\"},{type:\"json\"}).then(function(o){var a;o=o[\"歲出\"];console.log(o);a=function(o){var n,a,e,t,r;n=Array.from(new Set(o.map(function(n){return n.county})));a=new Set;e=n.map(function(e){var r,n,t;r=o.filter(function(n){return n.county===e});n=Array.from(new Set(r.map(function(n){return n[\"政事別\"]})));n.map(function(n){return a.add(n)});t=Object.fromEntries(n.map(function(e){var n;n=r.filter(function(n){return n[\"政事別\"]===e&&n.year===114}).reduce(function(n,e){return n+e[\"預算案\"]},0);return[e,n]}));return import$({county:e},t)});t=e.filter(function(n){return n.county===\"臺北市\"})[0];e=e.filter(function(n){return n.county!==\"中央\"&&n[\"民政支出\"]!==0});a=Array.from(a);e.map(function(n){});a.sort(function(n,e){var r;r=[t[n],t[e]],n=r[0],e=r[1];if(n\u003Ce){return 1}else if(n\u003Ee){return-1}else{return 0}});r={name:{key:\"county\"},size:Array.from(a).splice(0,10).map(function(n){return{key:n}})};return{raw:e,binding:r}};return makechart.bar({root:view.get(\"chart\")}).then(function(n){var e,r,t;e=a(o),r=e.raw,t=e.binding;n.on([\"select\"],function(n){return console.log(n)});n.setRaw({raw:r,binding:t});return n.config({brush:{enabled:false},percent:false,type:\"bar\",dancing:false,yaxis:{baseline:{show:false},caption:{show:false},tick:{inner:0},label:{padding:5}},xaxis:{baseline:{show:false},caption:{show:false},label:{format:\"d\"},tick:{boundaryOffset:false}},sort:{dir:\"asc\",dimension:\"size\",enabled:true}})})});function import$(n,e){var r={}.hasOwnProperty;for(var t in e)if(r.call(e,t))n[t]=e[t];return n}\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
