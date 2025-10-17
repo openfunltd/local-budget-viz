@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    +css([
+    {name: "bootstrap", path: "dist/css/bootstrap.min.css"}
+    ])
+  body
+    .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="chart", style="height:500px")
+    +script([
+    {url: "/assets/custom/bundle.min.js"},
+    {name: "ldview"}
+    ])
+    script(type="module"): include:lsc index.ls
