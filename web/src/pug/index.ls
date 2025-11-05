@@ -30,7 +30,7 @@ parse-counties-data = (data) ->
     size: Array.from(alltypes).splice(0, 10).map (key) -> {key}
   return {raw, binding}
 
-makechart.bar {root: view.get(\chart)}
+makechart.bar {root: view.get(\bar)}
   .then (chart) ->
     {raw, binding} = parse-counties-data data
     chart.on <[select]>, -> console.log it
@@ -51,3 +51,20 @@ makechart.bar {root: view.get(\chart)}
         label: format: \d
         tick: boundaryOffset: false
       sort: dir: \asc, dimension: \size, enabled: true
+
+
+makechart.scatter {root: view.get(\scatter)}
+  .then (chart) ->
+    chart.init!
+    chart.parse!
+    chart.bind!
+    chart.resize!
+    chart.render!
+
+makechart.treemap {root: view.get(\treemap)}
+  .then (chart) ->
+    chart.init!
+    chart.parse!
+    chart.bind!
+    chart.resize!
+    chart.render!

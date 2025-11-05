@@ -6,7 +6,10 @@ html
     {name: "bootstrap", path: "dist/css/bootstrap.min.css"}
     ])
   body
-    .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="chart", style="height:500px")
+    .d-flex.flex-column.g-2
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="bar", style="height:500px")
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="scatter", style="height:500px")
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="treemap", style="height:500px")
     +script([
     {url: "./assets/custom/bundle.min.js"},
     {name: "ldview"}
