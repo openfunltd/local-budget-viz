@@ -14,4 +14,8 @@ html
     {url: "./assets/custom/bundle.min.js"},
     {name: "ldview"}
     ])
-    script(type="module"): include:lsc index.ls
+    script(type="module")
+      include:lsc bar.ls
+      include:lsc scatter.ls
+      include:lsc treemap.ls
+      include:lsc index.ls
