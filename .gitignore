@@ -4,3 +4,4 @@ secret.*
 *.key
 .*.swp
 .swp
+web/static/assets/custom/dev
