@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    - libLoader.root("./assets/lib")
+    +css([
+    {name: "bootstrap", path: "dist/css/bootstrap.min.css"}
+    ])
+  body
+    .d-flex.flex-column.g-2
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="bar", style="height:500px")
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="scatter", style="height:500px")
+      .my-4.px-4.w-100: .mx-auto.w-100.border.p-4.rounded(ld="treemap", style="height:500px")
+    +script([
+    {url: "./assets/custom/bundle.min.js"},
+    {name: "ldview"}
+    ])
+    script(type="module")
+      include:lsc palette.ls
+      include:lsc bar.ls
+      include:lsc scatter.ls
+      include:lsc treemap.ls
+      include:lsc index.ls
