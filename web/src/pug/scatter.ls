@@ -25,16 +25,17 @@ makechart.scatter {root: view.get(\scatter)}
     chart.set-raw {raw, binding}
     chart.config do
       regression: enabled: false
-      dot: min-radius: 10, max-radius: 10, stroke-width: 0
+      dot: min-radius: 5, max-radius: 5, stroke-width: 0
       xaxis:
         tick: inner: 0, boundary-offset: false
         grid: enabled: true
       yaxis:
         scale: \pr
         tick: inner: 0
+        baseline: show: false
       palette: colors: [
-      * tag: <[增加]>, value: \#e8614c
-      * tag: <[減少]>, value: \#0b918c
-      * tag: <[不變]>, value: \#9db5d6
+      * tag: <[增加]>, value: \#bf5252
+      * tag: <[減少]>, value: \#75a886
+      * tag: <[不變]>, value: \#75a886
       ]
       legend: enabled: false
