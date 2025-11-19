@@ -30,6 +30,7 @@ makechart.bar {root: view.get(\bar)}
     chart.on <[select]>, -> console.log it
     chart.set-raw {raw, binding}
     chart.config do
+      palette: default-palette
       brush: enabled: false
       percent: false
       type: \bar

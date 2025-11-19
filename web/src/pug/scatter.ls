@@ -25,9 +25,10 @@ makechart.scatter {root: view.get(\scatter)}
     chart.set-raw {raw, binding}
     chart.config do
       regression: enabled: false
-      dot: min-radius: 10, max-radius: 10
+      dot: min-radius: 10, max-radius: 10, stroke-width: 0
       xaxis:
         tick: inner: 0, boundary-offset: false
+        grid: enabled: true
       yaxis:
         scale: \pr
         tick: inner: 0
