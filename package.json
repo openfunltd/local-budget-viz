@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx server -r web -o true"
+    "start": "npx server -r web -o true",
+    "deploy": "npx deploy web/static"
   },
   "keywords": [],
   "author": "",
