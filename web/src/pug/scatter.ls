@@ -18,6 +18,7 @@ binding =
   cat: {key: \cat}
   x: {key: \增減比例}
   y: {key: \增減金額}
+  size: {key: \預算案, unit: \元整}
 
 makechart.scatter {root: view.get(\scatter)}
   .then (chart) ->
@@ -25,7 +26,7 @@ makechart.scatter {root: view.get(\scatter)}
     chart.set-raw {raw, binding}
     chart.config do
       regression: enabled: false
-      dot: min-radius: 5, max-radius: 5, stroke-width: 0
+      dot: min-radius: 3, max-radius: 3, stroke-width: 0
       xaxis:
         tick: inner: 0, boundary-offset: false
         grid: enabled: true

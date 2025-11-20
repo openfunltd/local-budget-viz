@@ -10,7 +10,7 @@ raw = data
 binding =
   name: {key: \name}
   category: {key: \政事別}
-  area: {key: \預算案}
+  area: {key: \預算案, unit: \元}
 
 makechart.treemap {root: view.get(\treemap)}
   .then (chart) ->
