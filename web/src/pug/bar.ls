@@ -27,6 +27,7 @@ parse-counties-data = (data) ->
 makechart.bar {root: view.get(\bar)}
   .then (chart) ->
     {raw, binding} = parse-counties-data data
+    binding.size.map -> it.unit = \元整
     chart.on <[select]>, -> console.log it
     chart.set-raw {raw, binding}
     chart.config do

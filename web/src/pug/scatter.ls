@@ -29,10 +29,16 @@ makechart.scatter {root: view.get(\scatter)}
       xaxis:
         tick: inner: 0, boundary-offset: false
         grid: enabled: true
+        caption:
+          text: "( 增減比例 )"
+          color: '#999'
       yaxis:
         scale: \pr
         tick: inner: 0
         baseline: show: false
+        caption:
+          text: "( 增減金額 )"
+          color: '#999'
       palette: colors: [
       * tag: <[增加]>, value: \#bf5252
       * tag: <[減少]>, value: \#75a886
