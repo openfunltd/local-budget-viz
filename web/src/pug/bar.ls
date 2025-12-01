@@ -33,7 +33,7 @@ makechart.bar {root: view.get(\bar)}
     chart.config do
       palette: default-palette
       brush: enabled: false
-      percent: false
+      percent: true
       type: \bar
       dancing: false
       yaxis:
