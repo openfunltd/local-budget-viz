@@ -21,7 +21,7 @@
     "@zbryikt/deploy": "^0.0.4",
     "@zbryikt/template": "^2.4.1",
     "bootstrap": "^4.6.1",
-    "fedep": "^1.4.6",
+    "fedep": "^1.6.0",
     "ldcover": "^3.5.6",
     "ldview": "^1.5.1",
     "proxise": "^1.0.1"
